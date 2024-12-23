@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="379.0" prefWidth="423.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.demofx.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="welcomeText" />
+    <VBox prefHeight="200.0" prefWidth="100.0">
+        <children>
+            <TableView fx:id="tblCategories" prefHeight="200.0" prefWidth="200.0">
+                <columns>
+                    <TableColumn fx:id="colId" prefWidth="100.0" text="ID" />
+                    <TableColumn fx:id="colName" prefWidth="150.0" text="NAME" />
+                </columns>
+            </TableView>
+        </children>
+    </VBox>
+    <Label fx:id="name" />
+
+    <Button onAction="#onHelloButtonClick" prefHeight="0.0" prefWidth="48.0" text="Hello!" />
+</VBox>
