@@ -19,6 +19,13 @@ public class Medecin {
         this.tel = tel;
     }
 
+    public Medecin(int idMedecin) {
+        this.idMedecin = idMedecin;
+    }
+
+    public Medecin(int i, String nom, String prenom, String specialite, String telephone, String email) {
+    }
+
     // Getters et Setters
     public int getIdMedecin() {
         return idMedecin;
