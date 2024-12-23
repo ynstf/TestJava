@@ -43,7 +43,7 @@ public class DatabaseInitializer {
             );
         """;
 
-        try (Connection connection = ConnectionDB.getConnection();
+        try (Connection connection = SignletonConnexionDB.getConnexion();
              Statement statement = connection.createStatement()) {
 
             // Création des tables
@@ -60,7 +60,7 @@ public class DatabaseInitializer {
             System.err.println("Erreur lors de la création des tables : " + e.getMessage());
             e.printStackTrace();
         } finally {
-            ConnectionDB.closeConnexion();
+            SignletonConnexionDB.closeConnexion();
         }
     }
 

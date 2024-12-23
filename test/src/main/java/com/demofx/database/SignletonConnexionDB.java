@@ -5,14 +5,14 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 
-public class ConnectionDB {
+public class SignletonConnexionDB {
     private static Connection connection;
 
     private static final String DB_URL = "jdbc:mysql://localhost:3306/CabinetMedicalDB";
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "";
 
-    public static Connection getConnection() {
+    public static Connection getConnexion() {
         try {
             connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
             System.out.println("Connection successful");
